@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Představení platformy Cloudflare, jejího účelu, významu a přehled klíčových služeb, které nabízí pro zabezpečení a zrychlení webu.">
+    <title>Co je Cloudflare? | Průvodce internetovou bezpečností a rychlostí</title>
+    <!-- Google Fonts - Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon placeholder (CSS styled cloud representation) -->
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.36 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.36 10.04ZM19 18H6C3.79 18 2 16.21 2 14C2 11.95 3.53 10.24 5.56 10.03L6.63 9.92L7.13 8.97C8.08 7.14 9.94 6 12 6C14.71 6 17.06 7.82 17.77 10.43L18.07 11.53L19.2 11.55C20.79 11.58 22 12.87 22 14.5C22 16.43 20.65 18 19 18Z" fill="url(#orange-gradient)"/>
+                    <path d="M12 8C10.5 8 9.5 9 9 10.5C9.5 10.2 10.2 10 11 10C12.5 10 13 11 13.5 12C14 13 14.8 14 16.5 14C17 14 17.5 13.8 18 13.5C17.5 12 16.5 10.5 15 9.5C14 8.8 13 8 12 8Z" fill="url(#orange-gradient)" opacity="0.8"/>
+                    <defs>
+                        <linearGradient id="orange-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f38020" />
+                            <stop offset="100%" stop-color="#faad3f" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Cloud<span class="highlight">flare</span></span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#definition" class="nav-link">Co to je?</a>
+                <a href="#purpose" class="nav-link">K čemu slouží?</a>
+                <a href="#services" class="nav-link">Služby</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section / Definition -->
+        <section id="definition" class="hero-section">
+            <div class="container">
+                <div class="badge">Průvodce technologiemi</div>
+                <h1 class="hero-title">Co je to <span class="gradient-text">Cloudflare</span>?</h1>
+                <p class="hero-description">
+                    Cloudflare je globální technologická společnost, která poskytuje cloudové služby zaměřené na bezpečnost, rychlost a spolehlivost internetových stránek a aplikací. Funguje jako inteligentní prostředník (reverzní proxy) mezi koncovými uživateli a webovým serverem. Díky své rozsáhlé globální síti serverů dokáže výrazně urychlit načítání webu a zároveň jej chránit před kybernetickými hrozbami.
+                </p>
+                <div class="hero-cta">
+                    <a href="#purpose" class="btn btn-primary">Zjistit více</a>
+                    <a href="#services" class="btn btn-secondary">Prohlédnout služby</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purpose Section -->
+        <section id="purpose" class="purpose-section">
+            <div class="container grid-2">
+                <div class="purpose-content">
+                    <div class="section-label">Účel a význam</div>
+                    <h2 class="section-title">K čemu Cloudflare slouží?</h2>
+                    <p class="text-block">
+                        V dnešním digitálním světě čelí webové stránky dvěma hlavním výzvám: <strong>pomalému načítání</strong> pro vzdálené návštěvníky a <strong>neustálým bezpečnostním hrozbám</strong>. Cloudflare tyto problémy efektivně řeší tím, že se postaví jako ochranný štít a urychlovač před váš web.
+                    </p>
+                    <p class="text-block">
+                        Místo toho, aby se každý uživatel připojoval přímo na váš hlavní server, se nejprve připojí k nejbližšímu serveru sítě Cloudflare. Tím se dramaticky snižuje fyzická vzdálenost, kterou data musí překonat. Cloudflare zároveň analyzuje veškerý příchozí provoz, filtruje škodlivé roboty a blokuje útoky dříve, než vůbec dorazí k vašemu hostingu. Tím šetří systémové prostředky, snižuje náklady na provoz a předchází výpadkům.
+                    </p>
+                </div>
+                <div class="purpose-visual">
+                    <div class="glass-card visual-card">
+                        <div class="visual-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="visual-title">Jak to funguje v praxi</span>
+                        </div>
+                        <div class="visual-body">
+                            <div class="schema-container">
+                                <div class="schema-node user">
+                                    <div class="node-icon">👤</div>
+                                    <span>Uživatel</span>
+                                </div>
+                                <div class="schema-arrow pulse">
+                                    <span class="arrow-line"></span>
+                                    <span class="arrow-head"></span>
+                                </div>
+                                <div class="schema-node cloudflare highlight-node">
+                                    <div class="node-icon">☁️</div>
+                                    <span>Cloudflare</span>
+                                </div>
+                                <div class="schema-arrow pulse">
+                                    <span class="arrow-line"></span>
+                                    <span class="arrow-head"></span>
+                                </div>
+                                <div class="schema-node server">
+                                    <div class="node-icon">🖥️</div>
+                                    <span>Váš server</span>
+                                </div>
+                            </div>
+                            <div class="visual-desc">
+                                Cloudflare působí jako inteligentní filtr a vyrovnávací paměť (cache) na cestě mezi návštěvníkem a původním serverem.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-center">
+                    <div class="section-label">Přehled řešení</div>
+                    <h2 class="section-title">Vybrané služby Cloudflare</h2>
+                    <p class="section-subtitle">
+                        Platforma nabízí desítky nástrojů pro optimalizaci webů. Zde jsou ty nejdůležitější, které tvoří základ její popularity:
+                    </p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="glass-card service-card">
+                        <div class="card-glow-orange"></div>
+                        <div class="service-icon">🌐</div>
+                        <h3>CDN (Content Delivery Network)</h3>
+                        <p class="service-desc">
+                            Celosvětová síť serverů, která ukládá statický obsah webu do mezipaměti blízko uživatelům pro okamžité načtení.
+                        </p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="glass-card service-card">
+                        <div class="card-glow-orange"></div>
+                        <div class="service-icon">🛡️</div>
+                        <h3>DDoS ochrana</h3>
+                        <p class="service-desc">
+                            Automatické rozpoznávání a blokování škodlivého provozu s cílem zabránit přetížení a výpadku webového serveru.
+                        </p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="glass-card service-card">
+                        <div class="card-glow-orange"></div>
+                        <div class="service-icon">⚡</div>
+                        <h3>DNS (Domain Name System)</h3>
+                        <p class="service-desc">
+                            Rychlý a bezpečný překlad doménových jmen na IP adresy, který zkracuje dobu odezvy při načítání webu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Vytvořeno v rámci školního projektu. Texty jsou formulovány vlastními slovy s využitím informací o platformě Cloudflare.</p>
+            <p class="footer-links">
+                Projekt je publikován na <a href="https://github.com" target="_blank" rel="noopener">GitHubu</a> a běží na <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
